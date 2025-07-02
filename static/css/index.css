@@ -118,67 +118,26 @@ a {
 	border-radius: 8px;
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	left: 0px;
+.content-wrapper {
+	display: flex;
 	width: 100%;
-	height: var(--navbar-height);
+}
+
+.text-content {
+	width: 60%;
+	padding-right: 2rem;
+}
+
+.image-content {
+	width: 40%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding: 0 20px;
-	background-color: rgba(42, 31, 61, 0.85);
-	backdrop-filter: blur(8px);
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-	z-index: 1000;
-	font-size: 24px;
 }
-.logo img {
-	height: 40px;
-	width: auto;
-}
-.nav-items {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-.nav-items li {
-	margin: 0 28px;
-}
-.nav-items a {
-	color: var(--color-text-main);
-	font-weight: 500;
-	text-decoration: none;
-	transition: color 0.2s;
-}
-.nav-items a:hover {
-	background-color: var(--color-bg-base);
-	color: var(--color-text-main);
-	text-decoration: underline;
-}
-.nav-button .button {
-	padding: 8px 16px;
-	background-color: var(--color-bg-base) !important;
-	color: var(--color-button-text) !important;
-	border: none;
-	font-weight: 600;
-	font-size: 24px;
-	cursor: pointer;
-	transition: background-color 0.2s, transform 0.1s;
-	display: inline-flex;
-	align-items: center;
-	border-radius: 9999px;
-}
-.nav-button .button:hover {
-	background-color: var(--color-button-hover-bg) !important;
-	transform: translateY(-1px);
-}
-.nav-button .button .icon img {
-	display: inline-flex;
-	height: 1.3em; /* 设置图标高度与字体大小一致 */
-	width: auto; /* 保持宽高比 */
-	margin-right: 1px; /* 可选：为图标和文字之间添加间距 */
-	vertical-align: middle; /* 确保图标与文字垂直居中对齐 */
+
+.image-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
