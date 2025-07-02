@@ -12,10 +12,6 @@
 		<!-- Fonts & Bulma -->
 		<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 		<link rel="stylesheet" href="./static/css/bulma.min.css" />
-		<link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-		<link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
-		<link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
 		<link rel="stylesheet" href="./static/css/index.css" />
 
 		<!-- Scripts -->
@@ -46,7 +42,7 @@
 			</div>
 		</nav>
 
-		<div class="container-first">
+		<div class="container-full-screen">
 			<!-- Introduction Card -->
 			<div class="section-box" id="introduction">
 				<h1 class="title"><strong>DeepTrace</strong></h1>
@@ -72,7 +68,31 @@
 			<div class="section-box" id="abstract">
 				<h2 class="title">Abstract</h2>
 				<div class="content has-text-justified">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.</p>
+					<p>DeepTrace 是一个非侵入式、基于事务分析进行请求关联的分布式追踪框架，旨在解决大规模微服务系统在生产环境中监控和诊断的挑战。 它无需修改应用代码，利用主机端的事务分析机制来实现高效且准确的端到端请求追踪。 其核心目标包括多协议兼容性、精确追踪、高效操作和低性能开销。 DeepTrace 通过部署在主机上的 Agent 和中心 Server 协同工作，已在数十家公司的生产环境中成功部署，用于故障诊断、资源优化等任务，并在高并发下保持超过 95% 的追踪准确率。</p>
+				</div>
+			</div>
+
+			<!-- Attribute1 Card -->
+			<div class="section-box" id="attribute1">
+				<h2 class="title">跨协议追踪</h2>
+				<div class="content has-text-justified">
+					<p>DeepTrace 实现了非侵入式的跨协议 Span 构建。 它利用 eBPF 技术在系统调用层非侵入式地捕获原始网络数据（PID、Socket 五元组、时间戳、消息内容）。 基于对 RFC 和开源实现的分析，DeepTrace 设计了包含协议类型推断和内容分区的协议模板（支持超过 20 种主流应用层协议）。协议类型推断通过匹配请求消息中特定位置的字段值范围来完成。内容分区则利用协议内置的长度字段进行“跳跃式解析”，高效准确地分割请求边界（对于无长度字段的协议则进行全解析）。</p>
+				</div>
+			</div>
+
+			<!-- Attribute2 Card -->
+			<div class="section-box" id="attribute2">
+				<h2 class="title">高精度的请求关联</h2>
+				<div class="content has-text-justified">
+					<p>DeepTrace 的核心创新在于其基于事务的 Span 关联机制，以解决传统 非侵入式方案在高并发下的追踪准确率局限。它通过分析有状态的请求内容来推断请求之间的因果关系，包括 API 调用关系、请求内容中的事务字段。同时，它综合多维 Span 指标（如起止时间延迟、请求大小、持续时间）的概率分布，从而准确的多维度评估请求之间的父子关系概率。即使在高并发小依然能保持高精度的追踪准确率。</p>
+				</div>
+			</div>
+
+			<!-- Attribute3 Card -->
+			<div class="section-box" id="attribute3">
+				<h2 class="title">轻量级按需采集</h2>
+				<div class="content has-text-justified">
+					<p>为了显著降低海量 Span 的传输和存储开销，DeepTrace 采用查询驱动的按需追踪组装策略。Agent 在内存中临时存储 Span 时，并构建双重索引：1) 为每种标签类型（如主机名、服务名）建立倒排索引；2) 为每种度量指标（如持续时间）构建直方图（按值分桶）来降低缓存开销。这种设计避免了相同标签和相似度量值的冗余存储。当操作员通过 API 提交查询时，Server 将查询下发给所有 Agent。Agent 利用标签索引和度量直方图快速筛选出相关的 Span ，从而避免收集所有无关 Span 的开销。</p>
 				</div>
 			</div>
 
