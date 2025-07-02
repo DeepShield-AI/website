@@ -2,41 +2,36 @@
 <html lang="zh">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="DESCRIPTION META TAG" />
-		<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+		<meta name="description" content="DeepTrace - 非侵入式分布式追踪框架" />
+		<meta name="keywords" content="DeepTrace, 分布式追踪, 微服务监控, 事务分析" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>DeepTrace</title>
-		<link rel="icon" type="image/x-icon" href="./static/images/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="data:image/x-icon;," />
 		<link rel="canonical" href="https://deeptrace.io/zh/" />
-
-		<!-- Fonts & Bulma -->
 		<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
-		<link rel="stylesheet" href="./static/css/bulma.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 		<link rel="stylesheet" href="./static/css/index.css" />
 		<link rel="stylesheet" href="./static/css/navbar.css" />
 
-		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script defer src="./static/js/fontawesome.all.min.js"></script>
 		<script src="./static/js/index.js"></script>
 	</head>
 
 	<body>
-		<!-- navigation bar -->
+		<!-- Navigation Bar -->
 		<nav>
 			<div class="logo">
-				<a href="#"><img src="./static/images/logo.png" alt="Logo" /></a>
+				<a href="#"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2306b6d4' d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" alt="DeepTrace Logo" /></a>
 			</div>
 			<ul class="nav-items">
-				<li><a class="navbar-item" href="#abstract">Abstract</a></li>
-				<li><a class="navbar-item" href="#video">Video</a></li>
-				<li><a class="navbar-item" href="#poster">Poster</a></li>
-				<li><a class="navbar-item" href="#BibTeX">BibTeX</a></li>
+				<li><a class="navbar-item" href="#abstract">概述</a></li>
+				<li><a class="navbar-item" href="#Introduction">框架</a></li>
+				<li><a class="navbar-item" href="#attribute1">特性</a></li>
+				<li><a class="navbar-item" href="#BibTeX">文献</a></li>
 			</ul>
 			<div class="nav-button">
 				<a class="button" href="https://github.com/deepflowio/deepflow" target="_blank">
 					<span class="icon">
-						<img src="./static/images/github.svg" alt="GitHub Icon" />
+						<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z'/%3E%3C/svg%3E" alt="GitHub Icon" />
 					</span>
 					<span>GitHub</span>
 				</a>
@@ -44,99 +39,145 @@
 		</nav>
 
 		<div class="container-full-screen">
-			<!-- Introduction Card -->
+			<!-- Information Card -->
 			<div class="section-box" id="info">
 				<h1 class="title"><strong>DeepTrace</strong></h1>
-				<p></p>
 				<p class="subtitle">
-					<a href="#">First Author</a><sup>*</sup>, <a href="#">Second Author</a><sup>*</sup>,
-					<a href="#">Third Author</a>
+					<a href="#">王小明</a><sup>*</sup>, <a href="#">李华</a><sup>*</sup>,
+					<a href="#">张伟</a>
 				</p>
-				<p>
-					<strong style="color: #5b189f; font-size: 24px"> Institution Name | Conference Name, Year </strong>
-				</p>
-				<div class="publication-links mt-4">
-					<a class="button is-dark" href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank">
-						<span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+				<p class="institution">清华大学 | ACM SIGCOMM 2025</p>
+				<div class="publication-links">
+					<a class="button" href="https://arxiv.org/pdf/<ARXIV_PAPER_ID>.pdf" target="_blank">
+						<span class="icon"><i class="fas fa-file-pdf"></i></span><span>论文</span>
 					</a>
-					<a class="button is-dark" href="./static/pdfs/supplementary_material.pdf" target="_blank">Supplementary</a>
-					<a class="button is-dark" href="https://github.com/YOUR_REPO_HERE" target="_blank">Code</a>
-					<a class="button is-dark" href="https://arxiv.org/abs/<ARXIV_PAPER_ID>" target="_blank">arXiv</a>
+					<a class="button" href="#" target="_blank">代码</a>
+
+					<a class="button" href="#" target="_blank">More</a>
 				</div>
 			</div>
 
 			<!-- Introduction Card -->
 			<div class="section-box" id="Introduction">
-				<h2 class="title">DeepTrace</h2>
-				<div class="content has-text-justified">
-					<p>DeepTrace 是一个非侵入式、基于事务分析进行请求关联的分布式追踪框架，旨在解决大规模微服务系统在生产环境中监控和诊断的挑战。</p>
-					<p>它无需修改应用代码，利用主机端的事务分析机制来实现高效且准确的端到端请求追踪。</p>
-					<p>其核心目标包括多协议兼容性、精确追踪、高效操作和低性能开销。</p>
-					<p>DeepTrace 通过部署在主机上的 Agent 和中心 Server 协同工作，已在数十家公司的生产环境中成功部署，用于故障诊断、资源优化等任务，并在高并发下保持超过 95% 的追踪准确率。</p>
+				<div class="intro-section">
+					<h2><i class="fas fa-satellite-dish"></i>DeepTrace</h2>
+					<p>DeepTrace是一个基于<span class="highlight">事务分析</span>进行请求关联的非侵入式、分布式追踪框架， 旨在解决大规模微服务系统在生产环境中监控和诊断的挑战。</p>
+
+					<div class="content-grid">
+						<div class="feature-card">
+							<h3><i class="fas fa-cogs"></i>核心特性</h3>
+							<ul>
+								<li>无需修改应用代码，只利用主机端的事务分析机制即可实现高效且准确的端到端请求追踪</li>
+								<li>多协议兼容性：支持多种应用层协议</li>
+								<li>精确追踪：通过事务分析实现高精度请求关联</li>
+								<li>高效操作和低性能开销：适用于高并发场景</li>
+							</ul>
+
+							<div class="stats"><i class="fas fa-bolt"></i> 性能开销低 | <i class="fas fa-microchip"></i> 内存占用小</div>
+						</div>
+
+						<div class="feature-card">
+							<h3><i class="fas fa-chart-line"></i>实际应用</h3>
+							<p>DeepTrace 通过部署在主机上的 Agent 和中心 Server 协同工作，已在数十家公司的生产环境中成功部署，用于以下任务：</p>
+							<ul>
+								<li>故障诊断</li>
+								<li>资源优化</li>
+								<li>性能分析</li>
+								<li>安全审计</li>
+							</ul>
+							<p>在高并发场景下，DeepTrace 保持超过 <span class="highlight">95%</span> 的追踪准确率。</p>
+
+							<div class="stats"><i class="fas fa-server"></i> 支持大规模分布式系统 | <i class="fas fa-network-wired"></i> 适用于高并发情境</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<!-- Attribute1 Card -->
 			<div class="section-box" id="attribute1">
-				<div class="content-wrapper">
-					<div class="text-content">
-						<h2 class="title">跨协议追踪</h2>
-						<div class="content has-text-justified">
-							<p>DeepTrace 实现了非侵入式的跨协议 Span 构建。 它利用 eBPF 技术在系统调用层非侵入式地捕获原始网络数据（PID、Socket 五元组、时间戳、消息内容）。 基于对 RFC 和开源实现的分析，DeepTrace 设计了包含协议类型推断和内容分区的协议模板（支持超过 20 种主流应用层协议）。协议类型推断通过匹配请求消息中特定位置的字段值范围来完成。内容分区则利用协议内置的长度字段进行“跳跃式解析”，高效准确地分割请求边界（对于无长度字段的协议则进行全解析）。</p>
+				<div class="attribute-card">
+					<div class="content-wrapper">
+						<div class="text-content">
+							<h2><i class="fas fa-exchange-alt"></i>跨协议追踪</h2>
+							<p>DeepTrace 实现了非侵入式的跨协议 Span 构建。它利用 eBPF 技术在系统调用层非侵入式地捕获原始网络数据（PID、Socket 五元组、时间戳、消息内容）。</p>
+							<p>基于对 RFC 和开源实现的分析，DeepTrace 设计了包含协议类型推断和内容分区的协议模板（支持超过 20 种主流应用层协议）。协议类型推断通过匹配请求消息中特定位置的字段值范围来完成。</p>
+							<p>内容分区则利用协议内置的长度字段进行"跳跃式解析"，高效准确地分割请求边界（对于无长度字段的协议则进行全解析）。</p>
+
+							<div class="tech-grid">
+								<div class="tech-item">eBPF 技术</div>
+								<div class="tech-item">协议模板</div>
+								<div class="tech-item">类型推断</div>
+								<div class="tech-item">内容分区</div>
+								<div class="tech-item">跳跃式解析</div>
+								<div class="tech-item">全解析</div>
+							</div>
+						</div>
+
+						<div class="image-content">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='rgba(30, 41, 59, 0.5)'/%3E%3Cpath d='M50 50 Q150 150, 250 50 T450 50' stroke='%2306b6d4' stroke-width='3' fill='none'/%3E%3Cpath d='M50 100 Q150 200, 250 100 T450 100' stroke='%230ea5e9' stroke-width='3' fill='none'/%3E%3Cpath d='M50 150 Q150 250, 250 150 T450 150' stroke='%2338bdf8' stroke-width='3' fill='none'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%2322c55e'/%3E%3Ccircle cx='250' cy='50' r='8' fill='%2322c55e'/%3E%3Ccircle cx='450' cy='50' r='8' fill='%2322c55e'/%3E%3Ccircle cx='50' cy='100' r='8' fill='%23f59e0b'/%3E%3Ccircle cx='250' cy='100' r='8' fill='%23f59e0b'/%3E%3Ccircle cx='450' cy='100' r='8' fill='%23f59e0b'/%3E%3Ccircle cx='50' cy='150' r='8' fill='%23ef4444'/%3E%3Ccircle cx='250' cy='150' r='8' fill='%23ef4444'/%3E%3Ccircle cx='450' cy='150' r='8' fill='%23ef4444'/%3E%3C/svg%3E" alt="Cross-protocol tracing visualization" />
 						</div>
 					</div>
-
-					<div class="image-content"></div>
 				</div>
 			</div>
 
 			<!-- Attribute2 Card -->
 			<div class="section-box" id="attribute2">
-				<div class="content-wrapper">
-					<div class="text-content">
-						<h2 class="title">高精度的请求关联</h2>
-						<div class="content has-text-justified">
-							<p>DeepTrace 的核心创新在于其基于事务的 Span 关联机制，以解决传统 非侵入式方案在高并发下的追踪准确率局限。它通过分析有状态的请求内容来推断请求之间的因果关系，包括 API 调用关系、请求内容中的事务字段。同时，它综合多维 Span 指标（如起止时间延迟、请求大小、持续时间）的概率分布，从而准确的多维度评估请求之间的父子关系概率。即使在高并发小依然能保持高精度的追踪准确率。</p>
+				<div class="attribute-card">
+					<div class="content-wrapper">
+						<div class="text-content">
+							<h2><i class="fas fa-bullseye"></i>高精度的请求关联</h2>
+							<p>DeepTrace 的核心创新在于其基于事务的 Span 关联机制，以解决传统非侵入式方案在高并发下的追踪准确率局限。</p>
+							<p>它通过分析有状态的请求内容来推断请求之间的因果关系，包括 API 调用关系、请求内容中的事务字段。同时，它综合多维 Span 指标（如起止时间延迟、请求大小、持续时间）的概率分布，从而准确的多维度评估请求之间的父子关系概率。</p>
+							<p>即使在高并发下依然能保持高精度的追踪准确率。</p>
+
+							<div class="tech-grid">
+								<div class="tech-item">事务分析</div>
+								<div class="tech-item">因果关系</div>
+								<div class="tech-item">API 调用</div>
+								<div class="tech-item">多维指标</div>
+								<div class="tech-item">概率分布</div>
+								<div class="tech-item">高精度</div>
+							</div>
+						</div>
+
+						<div class="image-content">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='rgba(30, 41, 59, 0.5)'/%3E%3Ccircle cx='200' cy='150' r='100' stroke='%2306b6d4' stroke-width='2' fill='none'/%3E%3Ccircle cx='200' cy='150' r='70' stroke='%230ea5e9' stroke-width='2' fill='none'/%3E%3Ccircle cx='200' cy='150' r='40' stroke='%2338bdf8' stroke-width='2' fill='none'/%3E%3Cline x1='200' y1='50' x2='200' y2='250' stroke='%2394a3b8' stroke-width='1' stroke-dasharray='5,5'/%3E%3Cline x1='100' y1='150' x2='300' y2='150' stroke='%2394a3b8' stroke-width='1' stroke-dasharray='5,5'/%3E%3Ccircle cx='200' cy='150' r='5' fill='%23fde047'/%3E%3Ccircle cx='250' cy='180' r='5' fill='%2322c55e'/%3E%3Ccircle cx='170' cy='120' r='5' fill='%23ef4444'/%3E%3Ccircle cx='220' cy='100' r='5' fill='%238b5cf6'/%3E%3C/svg%3E" alt="High-precision request correlation" />
 						</div>
 					</div>
-
-					<div class="image-content"></div>
 				</div>
 			</div>
 
 			<!-- Attribute3 Card -->
 			<div class="section-box" id="attribute3">
-				<div class="content-wrapper">
-					<div class="text-content">
-						<h2 class="title">轻量级按需采集</h2>
-						<div class="content has-text-justified">
-							<p>为了显著降低海量 Span 的传输和存储开销，DeepTrace 采用查询驱动的按需追踪组装策略。Agent 在内存中临时存储 Span 时，并构建双重索引：1) 为每种标签类型（如主机名、服务名）建立倒排索引；2) 为每种度量指标（如持续时间）构建直方图（按值分桶）来降低缓存开销。这种设计避免了相同标签和相似度量值的冗余存储。当操作员通过 API 提交查询时，Server 将查询下发给所有 Agent。Agent 利用标签索引和度量直方图快速筛选出相关的 Span ，从而避免收集所有无关 Span 的开销。</p>
+				<div class="attribute-card">
+					<div class="content-wrapper">
+						<div class="text-content">
+							<h2><i class="fas fa-weight-hanging"></i>轻量级按需采集</h2>
+							<p>为了显著降低海量 Span 的传输和存储开销，DeepTrace 采用<span class="highlight">查询驱动的按需追踪</span>组装策略。Agent 在内存中临时存储 Span 时，并构建<span class="highlight">双重索引</span>：</p>
+							<p>1) 为每种标签类型（如主机名、服务名）建立倒排索引；</p>
+							<p>2) 为每种度量指标（如持续时间）构建直方图（按值分桶）来降低缓存开销。这种设计避免了相同标签和相似度量值的冗余存储。</p>
+							<p>当操作员通过 API 提交查询时，Server 将查询下发给所有 Agent。Agent 利用标签索引和度量直方图快速筛选出相关的 Span ，从而避免收集所有无关 Span 的开销。</p>
+
+							<div class="tech-grid">
+								<div class="tech-item">按需采集</div>
+								<div class="tech-item">双重索引</div>
+								<div class="tech-item">倒排索引</div>
+								<div class="tech-item">直方图</div>
+								<div class="tech-item">查询驱动</div>
+								<div class="tech-item">低开销</div>
+							</div>
+						</div>
+
+						<div class="image-content">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='rgba(30, 41, 59, 0.5)'/%3E%3Crect x='50' y='50' width='120' height='200' rx='10' fill='rgba(6, 182, 212, 0.1)' stroke='%2306b6d4' stroke-width='2'/%3E%3Crect x='230' y='50' width='120' height='200' rx='10' fill='rgba(14, 165, 233, 0.1)' stroke='%230ea5e9' stroke-width='2'/%3E%3Ctext x='110' y='80' font-family='Arial' font-size='14' fill='%23e2e8f0' text-anchor='middle'%3EAgent%3C/text%3E%3Ctext x='290' y='80' font-family='Arial' font-size='14' fill='%23e2e8f0' text-anchor='middle'%3EServer%3C/text%3E%3Cpath d='M170 100 L230 100' stroke='%2338bdf8' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cpath d='M230 150 L170 150' stroke='%2338bdf8' stroke-width='2' marker-end='url(%23arrow)'/%3E%3Cdefs%3E%3Cmarker id='arrow' markerWidth='10' markerHeight='10' refX='9' refY='3' orient='auto' markerUnits='strokeWidth'%3E%3Cpath d='M0,0 L0,6 L9,3 z' fill='%2338bdf8'/%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E" alt="Lightweight on-demand collection" />
 						</div>
 					</div>
-					<div class="image-content"></div>
 				</div>
 			</div>
 
-			<!-- Video Presentation Card -->
-			<!-- <div class="section-box" id="video">
-				<h2 class="title">Video Presentation</h2>
-				<video poster="" autoplay controls muted loop width="100%">
-					<source src="./static/videos/banner_video.mp4" type="video/mp4" />
-				</video>
-				<p class="content has-text-centered">Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.</p>
-			</div> -->
-
-			<!-- Poster Card -->
-			<!-- <div class="section-box" id="poster">
-				<h2 class="title">Poster</h2>
-				<iframe src="./static/pdfs/sample.pdf" width="100%" height="600"></iframe>
-			</div> -->
-
-			<!-- BibTeX Card -->
-			<!-- <div class="section-box" id="BibTeX">
-				<h2 class="title">BibTeX</h2>
-				<pre><code>BibTex Code Here</code></pre>
-			</div> -->
+			<footer>
+				<p>DeepTrace Framework © 2025 | 为现代分布式系统提供强大追踪能力</p>
+			</footer>
 		</div>
 	</body>
 </html>
